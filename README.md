@@ -17,7 +17,7 @@
 
 Створюємо парсер
 
-```
+```java
 Parser parser = XmlFactory.newBuilder()
         .on(START_ELEMENT, startHandler)
         .on(ATTRIBUTE_NAME, handler)
@@ -36,7 +36,7 @@ Parser parser = XmlFactory.newBuilder()
 
 Щоб обробити, наприклад, відкриваючий тег, треба реалізувати інтерфейс ```EventHandler```.
 
-```
+```java
 public interface EventHandler {
   void handle(String value);
 }
@@ -44,7 +44,7 @@ public interface EventHandler {
 
 Далі ми передаємо текст нашому парсеру
 
-```
+```java
 parser.parse(toInputStream("<a class=\"btn\"></a>"));
 ```
 
